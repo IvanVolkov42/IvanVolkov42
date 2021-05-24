@@ -35,16 +35,16 @@
         (login =="Директор") ? " здравстуйте" :
             (login == "") ? "Нет логина" : "";
     alert(message);*/
-    let age = prompt("Введите свой возраст");
+   // let age = prompt("Введите свой возраст");
     /*if(age < 14 || age >90)
     {
         alert(age);
-    }*/
+    }
     let ageValue;
     if (!(age >= 14 && age <=90))
     {
         alert(age);
-    }
+    }*/
 
 
 
