@@ -21,7 +21,7 @@ do
     UserNumber = prompt("Введите число",'0');
 
 } while ( UserNumber <= 100 && UserNumber );
-//task 4
+//task 4 Вывод простых чисел
 let n = prompt("Введите n");
 SimpleNumber:
 for(let i = 2;i <= n;i++)
