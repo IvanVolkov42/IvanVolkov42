@@ -46,3 +46,13 @@ if (NumberDegree < 1)
 } else {
     alert(NumberPow(UserNumber, NumberDegree));
 }
+// task 5 стрелочные функции
+function ask (question,yes,no) {
+    if(confirm(question)) yes()
+    else no();
+    }
+ask(
+    "Вы согласны?",
+    () => alert("Вы согласны"),
+    () => alert("Вы не согласны")
+);
