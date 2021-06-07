@@ -84,3 +84,44 @@ users.sort(byField("name"));
 users.forEach(user => alert(user.name));
 users.sort(byField("age"));
 users.forEach(user => alert(user.name));
+
+// task 8 Вывод каждую секунду
+function printNumbers(from,to) {
+    let current = from;
+    let timerId = setInterval(function () {
+        alert(current);
+        if( current == to) {
+            clearInterval(timerId);
+        }
+        current++;
+    },1000);
+}
+printNumbers(5,10);
+function printNumbersR(from,to) {
+    let current = from;
+    setTimeout(function go () {
+        alert(current);
+        if(current < to) {
+            setTimeout(go, 1000);
+        }
+        current++;
+    }, 1000);
+}
+printNumbersR(5,10);
+// task 9 Декоратор шпион
+function spy(func) {
+    function wrapper ( ...args) {
+        wrapper.calls.push(args);
+        return func.apply(this, arguments);
+    }
+    wrapper.calls = [];
+    return wrapper;
+}
+// task 10 Задерживающий декоратор
+function delay(f,ms) {
+    return function () {
+        setTimeout(() => f.apply(this, arguments),ms);
+    };
+}
+let f1000 = delay(alert,1000);
+f1000("test");
